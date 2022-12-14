@@ -7,6 +7,9 @@
 #Email          :krishnarayapudi25@gmail.com
 #License       : GNU GPL-3
 #######################################################################################
+
+##This script is to send alert mail if free memory is less than 20%. 
+
 ## declare mail variables
 ##email subject
 subject="Server Memory Status Alert"
@@ -17,7 +20,7 @@ to="admin1@example.com"
 ## send carbon copy to
 also_to="admin2@example.com"
 
-alert=99
+alert=20
 
 total_memory=$(free -m | grep "Mem:" | awk '{print $2}')
 free_memory=$(free -m | grep "Mem:" | awk '{print $4}')
